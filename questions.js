@@ -43,9 +43,10 @@ const questionsData = [
   },
   {
     id: 7,
-    title: "？について",
-    question: "令和8年度 〇学部 〇部",
-    order: "？",
+    title: "収支報告について",
+    question:
+      "青のマーカー部分が「令和8年度 〇学部 〇部」となっており、部活名は正式名称ですか？",
+    order: "「令和8年度 〇学部 〇部」と、正式名称でお願いします。",
     image: "images/7.jpg",
   },
 
