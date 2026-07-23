@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>決算報告書チェックツール</title>
+  </head>
+
+  <body>
+    <!--開始画面-->
+    <div class="screen" id="screen-start">
+      <h2>決算報告書チェックツール</h2>
+      <p>質問に答えると、最後にまとめて訂正指示が表示されます！</p>
+      <button id="button-start">開始する</button>
+    </div>
+
+    <!--質問画面-->
+    <div class="screen" id="screen-question">
+      <p id="num"></p>
+      <h2 id="title"></h2>
+      <p id="question"></p>
+      <button id="button-yes" onclick="answer(true)">はい</button>
+      <button id="button-no" onclick="answer(false)">いいえ</button>
+      <img id="question-image" width="300" />
+      <br />
+      <button id="button-back">戻る</button>
+    </div>
+
+    <!--結果画面-->
+    <div class="screen" id="screen-result">
+      <h2>訂正指示</h2>
+      <hr style="border: 0; height: 2px; background-color: #faa55a" />
+      <div id="result-list"></div>
+      <button id="button-pdf">PDFで保存</button>
+      <br />
+      <button id="button-restart">もう一度チェックする</button>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
