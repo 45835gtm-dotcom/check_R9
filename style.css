@@ -26,7 +26,6 @@ body {
   margin: 40px auto;
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0 0 10px 10%;
 }
 
 /*ボタン*/
@@ -80,6 +79,11 @@ img {
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
+  }
+
+  #screen-start,
+  #screen-question {
+    display: none !important;
   }
 
   #screen-result {
