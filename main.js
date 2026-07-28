@@ -72,6 +72,7 @@ function back() {
     showScreen("screen-start");
     return;
   }
+  misTakes.pop();
   current--;
   showQuestion();
 }
