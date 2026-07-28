@@ -1,10 +1,13 @@
 let current = 0; // 現在の質問番号
 let questions = questionsData; // 質問データ
 let misTakes = []; // ミス記録用の配列
+let answers = []; // 回答履歴用の配列
 
 //ボタンの機能
 document.getElementById("button-start").addEventListener("click", showQuestion);
-document.getElementById("button-back").addEventListener("click", back);
+document.querySelectorAll(".button-back").forEach((button) => {
+  button.addEventListener("click", back);
+});
 document.getElementById("button-restart").addEventListener("click", showStart);
 document.getElementById("button-pdf").addEventListener("click", savePDF);
 
@@ -21,6 +24,7 @@ function showScreen(id) {
 function showStart() {
   current = 0;
   misTakes = [];
+  answers = [];
   showScreen("screen-start");
 }
 
@@ -42,6 +46,7 @@ function showQuestion() {
 
 // yes、noボタン
 function answer(isYes) {
+  answers[current] = isYes;
   if (isYes) {
     nextQuestion();
   } else {
@@ -69,11 +74,14 @@ function saveMistake() {
 function back() {
   // 1問目の場合
   if (current <= 0) {
-    showScreen("screen-start");
+    showStart();
     return;
   }
-  misTakes.pop();
   current--;
+  if (answers[current] === false) {
+    misTakes.pop();
+  }
+  answers[current] = undefined;
   showQuestion();
 }
 
