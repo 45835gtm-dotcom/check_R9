@@ -103,6 +103,7 @@ function showResult() {
     div.className = "mistake";
 
     div.innerHTML = `
+      <p>${item.id}</p>
       <h3>${item.title}</h3>
       <p>${item.order}</p>
       <img src="${item.image}" width="300">
