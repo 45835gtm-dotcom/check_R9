@@ -211,7 +211,7 @@ const questionsData = [
     title: "すべての領収書について",
     question: "宛名が正式名称で書いてありますか？",
     order: "正式名称で書かれていない宛名は図2のように訂正してください。",
-    image: "images/27.png",
+    image: "images/27.jpg",
   },
   {
     id: 28,
@@ -262,7 +262,7 @@ const questionsData = [
     title: "？について",
     question: "？",
     order: "？",
-    image: "images/.jpg"
+    image: "images/？"
   },
   */
 ];
